@@ -1,0 +1,186 @@
+/* ==========================================================
+   CORES USADAS NO SITE (fica mais fácil de achar e trocar)
+   Escura (marrom):        #3D3039
+   Creme (fundo):          #FDF5E8
+   Pêssego (fundo do card): #FFE7C3
+   Laranja (destaque):     #C79A67
+   ========================================================== */
+
+/* RESET BÁSICO: tira a margem e o padding padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FDF5E8;
+  max-width: 900px;   /* largura máxima da página */
+  margin: 0 auto;     /* centraliza a página na tela */
+}
+
+/* ==========================================================
+   CABEÇALHO
+   ========================================================== */
+.cabecalho {
+  background-color: #3D3039;
+  color: #FDF5E8;
+  padding: 30px 50px;
+  position: relative; /* precisamos disso para o .selo-direita funcionar */
+}
+
+.selo {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #C79A67;
+  margin-bottom: 10px;
+}
+
+.logo {
+  font-size: 46px;
+  font-weight: 900;
+}
+
+.letra-destaque {
+  color: #C79A67;
+}
+
+.linha-fina {
+  border-top: 1px solid #6b5c63;
+  margin-top: 25px;
+}
+
+.selo-direita {
+  /* position absolute: tira o texto do fluxo normal e coloca
+     exatamente onde a gente quiser dentro do .cabecalho */
+  position: absolute;
+  right: 50px;
+  bottom: 28px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* ==========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================== */
+.conteudo {
+  padding: 60px 50px;
+}
+
+.titulo {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #3D3039;
+}
+
+.descricao {
+  font-size: 16px;
+  color: #3D3039;
+  margin-top: 16px;
+}
+
+.linha-grossa {
+  width: 40px;
+  border-top: 3px solid #C79A67;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* GRADE DE PRODUTOS: 3 colunas iguais usando CSS GRID */
+.grade-produtos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 colunas do mesmo tamanho */
+  gap: 18px; /* espaço entre os cards */
+}
+
+.produto {
+  background-color: #FFE7C3;
+}
+
+.imagem-produto {
+  position: relative; /* precisamos disso para o .numero funcionar */
+}
+
+.imagem-produto img {
+  width: 100%;
+  display: block; /* tira aquele espacinho branco que some embaixo da imagem */
+}
+
+.numero {
+  /* position absolute: coloca o número no canto da imagem,
+     sem empurrar o resto do conteúdo */
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 12px;
+  color: #3D3039;
+  opacity: 0.4;
+}
+
+.nome-produto {
+  font-size: 15px;
+  color: #3D3039;
+  padding: 16px 16px 0 16px;
+}
+
+.cor-produto {
+  font-size: 13px;
+  color: #3D3039;
+  opacity: 0.8;
+  padding: 4px 16px 0 16px;
+}
+
+.preco-produto {
+  font-size: 20px;
+  font-weight: 900;
+  color: #3D3039;
+  padding: 6px 16px 20px 16px;
+}
+
+/* ==========================================================
+   RODAPÉ
+   ========================================================== */
+.rodape {
+  background-color: #3D3039;
+  color: #FFE7C3;
+  padding: 50px;
+  margin-top: 30px;
+}
+
+.titulo-rodape {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.info-entrega {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+/* aqui usamos GRID de novo: 2 colunas, uma pra cada lado */
+.rodape-baixo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-top: 1px solid #5a4a52;
+  padding-top: 20px;
+}
+
+.site {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.contato {
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.instagram {
+  font-weight: bold;
+  text-align: right; /* joga o @KAULIFTS pra direita da coluna dele */
+}
