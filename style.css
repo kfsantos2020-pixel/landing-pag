@@ -8,8 +8,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #FDF5E8;
-  max-width: 900px;   /* largura máxima da página */
-  margin: 0 auto;     /* centraliza a página na tela */
+  max-width: 900px;   
+  margin: 0 auto;     
 }
 
 
